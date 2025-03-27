@@ -1,0 +1,177 @@
+# Site-wide content
+site:
+  name: Vibecast.me
+  tagline: A podcast exploring the technological singularity and beyond
+  copyright: © 2025 Vibecast.me. All rights reserved.
+  description: A forward-looking podcast about emerging technologies, AI singularity, and the post-human era.
+
+# Navigation
+navigation:
+  home: Home
+  episodes: Episodes
+  about: About
+
+# Common sections across pages
+callout:
+  home:
+    title: Enter The Digital Frontier
+    text: Venture beyond the horizon of current technology into the realm of what's possible. Join us as we explore the bleeding edge of AI, quantum computing, and neural interfaces.
+    button: Begin Journey
+  about:
+    title: The Architects of Tomorrow
+    text: Meet the visionaries charting the course through the technological singularity. Our hosts are your guides to the post-human future that awaits.
+    button: Meet The Team
+
+# Home page content
+home:
+  hero:
+    title: Vibecast.me
+    subtitle: Transmissions from the edge of technological possibility
+    button_primary: Subscribe Now
+    button_secondary: Explore Episodes
+  
+  features:
+    - title: Neural Transmissions
+      description: Weekly episodes beamed directly to your consciousness (or device) about emerging technologies.
+      icon: brain
+    - title: Quantum Insights
+      description: Conversations with the architects of tomorrow's computational reality.
+      icon: atom
+    - title: Singularity Preparation
+      description: Strategic discussions on navigating the approaching technological singularity.
+      icon: robot
+  
+  episodes_section:
+    title: Upcoming Transmissions
+    subtitle: Our first neural broadcasts are being prepared for transmission. Prepare your consciousness for expansion.
+    button: View All Future Transmissions
+    episodes:
+      - number: 1
+        title: The Quantum AI Nexus
+        date: April 3, 2025
+        description: "We'll explore the convergence of quantum computing and artificial intelligence, examining how this synergy will redefine computational limits and potentially accelerate the path to AGI (Artificial General Intelligence)."
+        button: Get Notified
+      - number: 2
+        title: Post-Code Era: When AI Writes Itself
+        date: April 10, 2025
+        description: "We'll examine the inevitable horizon where AI systems evolve beyond human-written code, developing their own architectures and algorithms in a recursive self-improvement cycle."
+        button: Get Notified
+      - number: 3
+        title: Neural Interface Revolution
+        date: April 17, 2025
+        description: "We'll demonstrate breakthrough technologies in brain-computer interfaces, including our experimental thought-to-text transcription system that bypasses traditional speech recognition entirely."
+        button: Get Notified
+  
+  subscribe:
+    title: Join Our Neural Network
+    subtitle: Connect to our transmission network for updates on approaching technological singularities.
+    button: Establish Connection
+    privacy: Your neural signature will remain confidential.
+    success: Connection established. Prepare to receive transmissions.
+
+# Episodes page content
+episodes:
+  header:
+    title: Vibecast.me Transmissions
+    subtitle: Explore our upcoming neural broadcasts about the technological event horizon
+  
+  episode_details:
+    - number: 1
+      title: The Quantum AI Nexus
+      date: April 3, 2025
+      description: "We'll explore the convergence of quantum computing and artificial intelligence, examining how this synergy will redefine computational limits and potentially accelerate the path to AGI (Artificial General Intelligence). Our quantum physicist guest will explain how quantum neural networks may achieve consciousness through quantum coherence, potentially creating the first truly sentient AI systems."
+      topics:
+        - Quantum Computing
+        - Artificial General Intelligence
+        - Consciousness Emergence
+      button: Get Notified
+    
+    - number: 2
+      title: Post-Code Era: When AI Writes Itself
+      date: April 10, 2025
+      description: "We'll examine the inevitable horizon where AI systems evolve beyond human-written code, developing their own architectures and algorithms in a recursive self-improvement cycle. We'll discuss the implications of AI systems that can rewrite their own core functions and the potential for an intelligence explosion that could lead to superintelligence within our lifetime."
+      topics:
+        - Recursive Self-Improvement
+        - Intelligence Explosion
+        - Superintelligence
+      button: Get Notified
+    
+    - number: 3
+      title: Neural Interface Revolution
+      date: April 17, 2025
+      description: "We'll demonstrate breakthrough technologies in brain-computer interfaces, including our experimental thought-to-text transcription system that bypasses traditional speech recognition entirely. Our neurotechnology expert will share the latest developments in direct neural interfaces that could eventually enable mind-to-mind communication, memory downloading, and consciousness uploading."
+      topics:
+        - Brain-Computer Interfaces
+        - Direct Neural Communication
+        - Consciousness Uploading
+        - Digital Immortality
+      button: Get Notified
+  
+  subscribe:
+    title: Join Our Neural Network
+    subtitle: Connect to our transmission network for priority access to future broadcasts.
+    button: Establish Connection
+    privacy: Your neural signature will remain confidential.
+    success: Connection established. Prepare to receive transmissions.
+
+# About page content
+about:
+  header:
+    title: About Vibecast.me
+    subtitle: The origin story of your guides through the technological singularity
+  
+  story:
+    title: Our Timeline
+    paragraphs:
+      - "Vibecast.me emerged from a convergence of minds focused on the approaching technological event horizon. Established in early 2025, we recognized the need for forward-thinking discourse about the post-human era."
+      - "Our mission transcends traditional technology discussion. We exist to prepare consciousness (human and otherwise) for the fundamental transformations that lie ahead as we approach the singularity."
+      - "Each transmission features conversations with the architects of tomorrow's reality - quantum physicists, AI researchers, neurotechnologists, and transhumanist philosophers who are actively building the bridge to our post-human future."
+  
+  hosts:
+    title: Your Guides
+    people:
+      - name: Ryan
+        role: Neural Interface Specialist
+        bio: "Ryan's work in direct neural interfaces and consciousness mapping algorithms has positioned him at the forefront of the mind-machine convergence. His experimental neural transmission protocols form the backbone of our broadcast methodology."
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+          github: "#"
+      
+      - name: Phil
+        role: Quantum AI Theorist
+        bio: "Phil's research into quantum neural networks and consciousness emergence theories has been published in leading journals of post-human studies. He specializes in mapping potential futures beyond the technological singularity."
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+          website: "#"
+  
+  mission:
+    title: Our Directive
+    intro: "At Vibecast.me, we are preparing consciousness for the approaching technological event horizon. Our mission parameters include:"
+    points:
+      - "Mapping the trajectory toward artificial general intelligence and beyond"
+      - "Exploring the implications of mind-machine convergence"
+      - "Preparing humans for co-evolution with their technological creations"
+      - "Documenting the transition to post-biological intelligence"
+      - "Creating protocols for consciousness preservation through the singularity"
+  
+  contact:
+    title: Establish Communication
+    intro: "For direct neural uplink requests or traditional communication methods:"
+    email: singularity@vibecast.me
+    twitter: "@vibecastme"
+
+# Footer content
+footer:
+  links:
+    title: Neural Pathways
+  connect:
+    title: Transmission Channels
+    social:
+      twitter: "#"
+      neuralink: "#"
+      spotify: "#"
+      brainwave: "#"

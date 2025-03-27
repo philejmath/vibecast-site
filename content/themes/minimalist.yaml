@@ -1,0 +1,173 @@
+# Site-wide content
+site:
+  name: Vibecast.me
+  tagline: Tech. AI. Future.
+  copyright: © 2025 Vibecast.me
+  description: A podcast about technology and AI.
+
+# Navigation
+navigation:
+  home: Home
+  episodes: Episodes
+  about: About
+
+# Common sections across pages
+callout:
+  home:
+    title: Join Us
+    text: Simple, focused discussions on technology and AI.
+    button: Register
+  about:
+    title: Our Team
+    text: The people behind Vibecast.me.
+    button: Learn More
+
+# Home page content
+home:
+  hero:
+    title: Vibecast.me
+    subtitle: Tech. AI. Future.
+    button_primary: Subscribe
+    button_secondary: Episodes
+  
+  features:
+    - title: Weekly
+      description: New episodes every Thursday.
+      icon: calendar
+    - title: Experts
+      description: Conversations with industry leaders.
+      icon: user
+    - title: Insights
+      description: Clear analysis of tech trends.
+      icon: lightbulb
+  
+  episodes_section:
+    title: Coming Soon
+    subtitle: Our first episodes are in production.
+    button: View All
+    episodes:
+      - number: 1
+        title: AI in Practice
+        date: April 3, 2025
+        description: "A practical look at AI implementation and usage."
+        button: Notify
+      - number: 2
+        title: Future of Development
+        date: April 10, 2025
+        description: "How AI is changing software development."
+        button: Notify
+      - number: 3
+        title: Speech Recognition
+        date: April 17, 2025
+        description: "Exploring real-time transcription technology."
+        button: Notify
+  
+  subscribe:
+    title: Subscribe
+    subtitle: Updates on new episodes.
+    button: Subscribe
+    privacy: Your data is private.
+    success: Subscribed.
+
+# Episodes page content
+episodes:
+  header:
+    title: Episodes
+    subtitle: Upcoming content
+  
+  episode_details:
+    - number: 1
+      title: AI in Practice
+      date: April 3, 2025
+      description: "A practical look at AI implementation and usage in everyday scenarios."
+      topics:
+        - AI
+        - Implementation
+        - Practical Use
+      button: Notify
+    
+    - number: 2
+      title: Future of Development
+      date: April 10, 2025
+      description: "How AI is changing software development practices and processes."
+      topics:
+        - Development
+        - AI Tools
+        - Future
+      button: Notify
+    
+    - number: 3
+      title: Speech Recognition
+      date: April 17, 2025
+      description: "Exploring real-time transcription technology and its applications."
+      topics:
+        - Speech Recognition
+        - Transcription
+        - Applications
+      button: Notify
+  
+  subscribe:
+    title: Stay Updated
+    subtitle: Get notifications about new episodes.
+    button: Subscribe
+    privacy: Your data is private.
+    success: Subscribed.
+
+# About page content
+about:
+  header:
+    title: About
+    subtitle: Our story
+  
+  story:
+    title: Story
+    paragraphs:
+      - "Vibecast.me started in 2025 to explore technology and AI."
+      - "We focus on clear, concise information about tech trends."
+      - "Each episode features expert insights and analysis."
+  
+  hosts:
+    title: Hosts
+    people:
+      - name: Ryan
+        role: Host
+        bio: "Technology specialist with experience in AI implementation."
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+      
+      - name: Phil
+        role: Host
+        bio: "Industry analyst focused on emerging tech trends."
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+  
+  mission:
+    title: Mission
+    intro: "Our goals:"
+    points:
+      - "Provide clear information on technology"
+      - "Analyze AI trends"
+      - "Discuss the future of work"
+      - "Build a tech community"
+  
+  contact:
+    title: Contact
+    intro: "Get in touch:"
+    email: contact@vibecast.me
+    twitter: "@vibecastme"
+
+# Footer content
+footer:
+  links:
+    title: Links
+  connect:
+    title: Connect
+    social:
+      twitter: "#"
+      linkedin: "#"
+      spotify: "#"
+      apple: "#"

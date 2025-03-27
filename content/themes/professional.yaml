@@ -1,0 +1,177 @@
+# Site-wide content
+site:
+  name: Vibecast.me
+  tagline: A podcast exploring technology, AI, and the future of work
+  copyright: © 2025 Vibecast.me. All rights reserved.
+  description: A professional podcast about technology, AI, and the future of work.
+
+# Navigation
+navigation:
+  home: Home
+  episodes: Episodes
+  about: About
+
+# Common sections across pages
+callout:
+  home:
+    title: Join Our Professional Tech Discussions
+    text: Engage in thought-provoking conversations about the latest in technology and AI. Our expert-led discussions provide valuable insights for professionals in the tech industry.
+    button: Register Now
+  about:
+    title: Meet Our Expert Team
+    text: Get to know the professionals behind Vibecast.me. Our hosts bring years of industry experience and technical expertise to every episode.
+    button: Learn More
+
+# Home page content
+home:
+  hero:
+    title: Welcome to Vibecast.me
+    subtitle: A professional podcast exploring technology, AI, and the future of work
+    button_primary: Subscribe Now
+    button_secondary: View Episodes
+  
+  features:
+    - title: Weekly Episodes
+      description: New episodes every Thursday exploring the latest in technology and AI.
+      icon: calendar-week
+    - title: Industry Experts
+      description: In-depth interviews with leading professionals in tech and AI.
+      icon: user-tie
+    - title: Data-Driven Analysis
+      description: Evidence-based discussions on how technology is transforming business.
+      icon: chart-line
+  
+  episodes_section:
+    title: Upcoming Episodes
+    subtitle: Our first episodes are in production and will be launching soon. Stay informed with our professional analysis of tech trends.
+    button: View All Upcoming Episodes
+    episodes:
+      - number: 1
+        title: AI Implementation Strategies for Businesses
+        date: April 3, 2025
+        description: "Join us as we explore effective strategies for implementing AI solutions in business environments. We'll discuss best practices, common challenges, and how to measure ROI on AI investments."
+        button: Get Notified
+      - number: 2
+        title: The Future of Software Development with AI
+        date: April 10, 2025
+        description: "We'll analyze how AI is transforming software development processes and what this means for the future of the profession. Industry experts share insights on adapting to this changing landscape."
+        button: Get Notified
+      - number: 3
+        title: Speech Recognition Technology: Applications and Advancements
+        date: April 17, 2025
+        description: "We'll examine the latest advancements in speech recognition technology, including our custom real-time Whisper transcription tool. Learn about enterprise applications and implementation considerations."
+        button: Get Notified
+  
+  subscribe:
+    title: Subscribe to Vibecast.me
+    subtitle: Sign up to receive updates about new episodes and exclusive content.
+    button: Subscribe
+    privacy: We'll never share your email with anyone else.
+    success: Thank you for subscribing. You'll receive our professional insights directly to your inbox.
+
+# Episodes page content
+episodes:
+  header:
+    title: Vibecast.me Episodes
+    subtitle: Stay informed with our upcoming episodes about technology, AI, and the future of work
+  
+  episode_details:
+    - number: 1
+      title: AI Implementation Strategies for Businesses
+      date: April 3, 2025
+      description: "Join us as we explore effective strategies for implementing AI solutions in business environments. We'll discuss best practices, common challenges, and how to measure ROI on AI investments. Our expert guests will share case studies of successful AI implementations across various industries."
+      topics:
+        - AI Strategy
+        - Business Implementation
+        - ROI Analysis
+      button: Get Notified
+    
+    - number: 2
+      title: The Future of Software Development with AI
+      date: April 10, 2025
+      description: "We'll analyze how AI is transforming software development processes and what this means for the future of the profession. Industry experts share insights on adapting to this changing landscape. Topics include AI pair programming, automated testing, and the evolving skill requirements for developers."
+      topics:
+        - Software Development
+        - Career Evolution
+        - AI Tools
+      button: Get Notified
+    
+    - number: 3
+      title: Speech Recognition Technology: Applications and Advancements
+      date: April 17, 2025
+      description: "We'll examine the latest advancements in speech recognition technology, including our custom real-time Whisper transcription tool. Learn about enterprise applications and implementation considerations. We'll discuss the technical architecture behind modern speech recognition systems and explore use cases across healthcare, customer service, and productivity tools."
+      topics:
+        - Speech Recognition
+        - OpenAI Whisper
+        - Enterprise Applications
+        - Technical Architecture
+      button: Get Notified
+  
+  subscribe:
+    title: Stay Informed
+    subtitle: Sign up to receive notifications when our first episodes are released.
+    button: Subscribe
+    privacy: We'll never share your email with anyone else.
+    success: Thank you for subscribing to our professional insights.
+
+# About page content
+about:
+  header:
+    title: About Vibecast.me
+    subtitle: Learn more about our professional podcast and the team behind it
+  
+  story:
+    title: Our Story
+    paragraphs:
+      - Vibecast.me was founded by industry professionals with a shared commitment to exploring how technology and AI are reshaping the business landscape. We launched in early 2025 to provide thoughtful analysis on the future of work.
+      - Our mission is to deliver insightful, data-driven discussions about technological advancements. We bridge the gap between technical complexity and practical business applications.
+      - Each episode features carefully researched content and expert guests who bring valuable perspectives on emerging technologies and their implications for professionals across industries.
+  
+  hosts:
+    title: Meet the Hosts
+    people:
+      - name: Ryan
+        role: Host & Technology Strategist
+        bio: Ryan brings over 15 years of experience in enterprise software development and AI implementation. His background in both startups and Fortune 500 companies provides a balanced perspective on technology adoption.
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+          github: "#"
+      
+      - name: Phil
+        role: Host & Industry Analyst
+        bio: Phil is a respected technology analyst with expertise in market trends and digital transformation. His research has been featured in leading business publications, and he regularly consults with organizations on technology strategy.
+        image: https://via.placeholder.com/150
+        social:
+          twitter: "#"
+          linkedin: "#"
+          website: "#"
+  
+  mission:
+    title: Our Mission
+    intro: At Vibecast.me, we are committed to providing valuable insights that help professionals navigate technological change. Our mission is to
+    points:
+      - Deliver clear, actionable information on complex technological topics
+      - Analyze the business implications of emerging technologies
+      - Provide strategic perspectives on digital transformation
+      - Help professionals prepare for evolving skill requirements
+      - Build a community of forward-thinking business and technology leaders
+  
+  contact:
+    title: Contact Us
+    intro: For inquiries about sponsorship, guest appearances, or other matters, please reach out to our team.
+    email: contact@vibecast.me
+    twitter: "@vibecastme"
+
+# Footer content
+footer:
+  links:
+    title: Resources
+  connect:
+    title: Connect
+    social:
+      twitter: "#"
+      linkedin: "#"
+      spotify: "#"
+      apple: "#"

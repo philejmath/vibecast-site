@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Learn more about Vibecast.me, a podcast about technology, AI, and the future of work">
+    <meta name="keywords" content="podcast about, technology podcast, AI podcast, tech hosts">
+    <!-- js-yaml for YAML parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-podcast me-2"></i>Vibecast.me
+                <i class="fas fa-rocket me-2"></i>Vibecast.me
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -36,11 +41,25 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="py-5 bg-light text-center">
+    <!-- Background Image Callout Section -->
+    <section class="bg-image-callout text-white text-center">
         <div class="container">
-            <h1 class="fw-bold">About Vibecast.me</h1>
-            <p class="lead">Learn more about our podcast and hosts</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <i class="fas fa-hat-wizard wizard-icon"></i>
+                    <h2 class="callout-heading">Meet The Cosmic Crew</h2>
+                    <p class="callout-text">The minds behind the monkeys, the shark, and the Mars adventures! Learn about the team that brings you tech conversations with a side of interplanetary humor.</p>
+                    <a href="#contact" class="btn btn-lg btn-callout">Join Our Mission <i class="fas fa-rocket ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <header class="py-5 text-center">
+        <div class="container">
+            <h1 class="fw-bold display-4">About Vibecast.me</h1>
+            <p class="lead">Learn more about our podcast and the cosmic crew behind it</p>
         </div>
     </header>
 
@@ -49,39 +68,41 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="mb-4">Our Story</h2>
-                    <p>Vibecast.me was born from a shared passion for technology and a curiosity about how AI is reshaping our world. We started this podcast in early 2025 to explore the intersection of technology, AI, and the future of work.</p>
-                    
-                    <p>Our goal is to provide insightful, accessible discussions about complex technological topics. Whether you're a tech professional, a curious observer, or somewhere in between, we aim to make these conversations engaging and valuable.</p>
-                    
-                    <p>Each week, we bring you interviews with industry experts, deep dives into emerging technologies, and thoughtful discussions about how these innovations are changing the way we work and live.</p>
+                    <div class="card shadow-sm mb-5 p-4">
+                        <h2 class="mb-4 text-primary">Our Story</h2>
+                        <p>Vibecast.me was born from a shared passion for technology and a curiosity about how AI is reshaping our world. We started this podcast in early 2025 to explore the intersection of technology, AI, and the future of work.</p>
+                        
+                        <p>Our goal is to provide insightful, accessible discussions about complex technological topics. Whether you're a tech professional, a curious observer, or somewhere in between, we aim to make these conversations engaging and valuable.</p>
+                        
+                        <p>Each week, we bring you interviews with industry experts, deep dives into emerging technologies, and thoughtful discussions about how these innovations are changing the way we work and live.</p>
+                    </div>
                     
                     <div class="my-5">
-                        <h2 class="mb-4">Meet the Hosts</h2>
+                        <h2 class="mb-4 text-primary">Meet the Hosts</h2>
                         <div class="row">
                             <div class="col-md-6 mb-4">
-                                <div class="team-member">
-                                    <img src="https://via.placeholder.com/150" alt="Ryan" class="mb-3">
-                                    <h4>Ryan</h4>
-                                    <p class="text-muted">Co-Host & Tech Enthusiast</p>
+                                <div class="team-member card shadow-sm p-4 h-100">
+                                    <img src="https://via.placeholder.com/150" alt="Ryan" class="mb-3 rounded-circle mx-auto" style="max-width: 150px;">
+                                    <h4 class="text-center">Ryan</h4>
+                                    <p class="text-muted text-center">Co-Host & Tech Enthusiast</p>
                                     <p>Ryan brings his experience as a software engineer and AI researcher to the podcast. He's passionate about exploring how technology can solve real-world problems.</p>
-                                    <div class="social-icons">
-                                        <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" class="text-dark me-2"><i class="fab fa-github"></i></a>
+                                    <div class="social-icons text-center mt-3">
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-github fa-lg"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
-                                <div class="team-member">
-                                    <img src="https://via.placeholder.com/150" alt="Phil" class="mb-3">
-                                    <h4>Phil</h4>
-                                    <p class="text-muted">Co-Host & Industry Analyst</p>
+                                <div class="team-member card shadow-sm p-4 h-100">
+                                    <img src="https://via.placeholder.com/150" alt="Phil" class="mb-3 rounded-circle mx-auto" style="max-width: 150px;">
+                                    <h4 class="text-center">Phil</h4>
+                                    <p class="text-muted text-center">Co-Host & Industry Analyst</p>
                                     <p>Phil has spent over a decade analyzing technology trends and their impact on business. He brings a strategic perspective to discussions about the future of work.</p>
-                                    <div class="social-icons">
-                                        <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" class="text-dark me-2"><i class="fas fa-globe"></i></a>
+                                    <div class="social-icons text-center mt-3">
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                        <a href="#" class="text-primary me-2"><i class="fas fa-globe fa-lg"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -89,22 +110,26 @@
                     </div>
                     
                     <div class="my-5">
-                        <h2 class="mb-4">Our Mission</h2>
-                        <p>At Vibecast.me, we believe that understanding technology is crucial for navigating our rapidly changing world. Our mission is to:</p>
-                        <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item bg-transparent">Demystify complex technological concepts</li>
-                            <li class="list-group-item bg-transparent">Explore the ethical implications of emerging technologies</li>
-                            <li class="list-group-item bg-transparent">Provide insights into how AI is transforming various industries</li>
-                            <li class="list-group-item bg-transparent">Help listeners prepare for the future of work</li>
-                            <li class="list-group-item bg-transparent">Create a community of forward-thinking individuals</li>
-                        </ul>
+                        <div class="card shadow-sm p-4">
+                            <h2 class="mb-4 text-primary">Our Mission</h2>
+                            <p>At Vibecast.me, we believe that understanding technology is crucial for navigating our rapidly changing world. Our mission is to:</p>
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item bg-transparent"><i class="fas fa-check-circle text-primary me-2"></i> Demystify complex technological concepts</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-check-circle text-primary me-2"></i> Explore the ethical implications of emerging technologies</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-check-circle text-primary me-2"></i> Provide insights into how AI is transforming various industries</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-check-circle text-primary me-2"></i> Help listeners prepare for the future of work</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-check-circle text-primary me-2"></i> Create a community of forward-thinking individuals</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="my-5">
-                        <h2 class="mb-4">Contact Us</h2>
-                        <p>Have a question, suggestion, or want to be a guest on our show? We'd love to hear from you!</p>
-                        <p><strong>Email:</strong> <a href="mailto:hello@vibecast.me">hello@vibecast.me</a></p>
-                        <p><strong>Twitter:</strong> <a href="https://twitter.com/vibecastme">@vibecastme</a></p>
+                    <div class="my-5" id="contact">
+                        <div class="card shadow-sm p-4">
+                            <h2 class="mb-4 text-primary">Contact Us</h2>
+                            <p>Have a question, suggestion, or want to be a guest on our show? We'd love to hear from you!</p>
+                            <p><i class="fas fa-envelope text-primary me-2"></i> <strong>Email:</strong> <a href="mailto:hello@vibecast.me">hello@vibecast.me</a></p>
+                            <p><i class="fab fa-twitter text-primary me-2"></i> <strong>Twitter:</strong> <a href="https://twitter.com/vibecastme">@vibecastme</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,11 +137,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Vibecast.me</h5>
+                    <h5><i class="fas fa-rocket me-2"></i> Vibecast.me</h5>
                     <p>A podcast about technology, AI, and the future of work.</p>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -130,16 +155,16 @@
                 <div class="col-md-4">
                     <h5>Connect</h5>
                     <div class="social-icons">
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-spotify"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-spotify"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-apple"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Vibecast.me. All rights reserved.</p>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p> 2025 Vibecast.me. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -149,5 +174,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <!-- Content Loader JS -->
+    <script src="js/content-loader.js"></script>
 </body>
 </html>
