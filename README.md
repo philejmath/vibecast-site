@@ -1,50 +1,63 @@
-# Vibcast Website
+# Vibecast.me
 
-A static website for the Vibcast podcast, built with HTML, CSS, and JavaScript. This site is designed to be hosted on GitHub Pages.
+Vibecast.me is a podcast website exploring technology, AI, and the future of work. This repository contains the source code for the Vibecast.me website.
 
 ## Features
 
-- Responsive design that works on mobile, tablet, and desktop
-- Modern, clean UI with Bootstrap 5
-- Newsletter signup form
-- Episode listings
+- Responsive design using Bootstrap 5
+- Modern UI with clean aesthetics
+- Episode listings with descriptions
+- Newsletter subscription form
 - About page with team information
+- Cross-platform podcast links
 
-## Development
+## Development Setup
 
-This is a simple static website that can be developed locally and deployed to GitHub Pages.
+1. Clone the repository:
+   ```
+   git clone https://github.com/philejmath/vibecast-site.git
+   ```
 
-### Local Development
+2. Open the project folder:
+   ```
+   cd vibecast-site
+   ```
 
-To preview the site locally, you can use any simple HTTP server. For example, with Python:
+3. Open `index.html` in your browser to view the site locally.
 
-```bash
-# Python 3
-python -m http.server
+## Project Structure
 
-# Python 2
-python -m SimpleHTTPServer
-```
+- `index.html` - Homepage
+- `episodes.html` - Episodes listing page
+- `about.html` - About the podcast and team
+- `css/` - Stylesheets
+- `js/` - JavaScript files
+- `images/` - Image assets
 
-Then visit `http://localhost:8000` in your browser.
+## Deployment
 
-### Deployment
+The site is deployed using GitHub Pages and can be accessed at [https://philejmath.github.io/vibecast-site/](https://philejmath.github.io/vibecast-site/).
 
-To deploy to GitHub Pages:
+## Current Status
 
-1. Push this repository to GitHub
-2. Go to the repository settings
-3. Under "GitHub Pages", select the branch you want to deploy from (usually `main` or `master`)
-4. The site will be available at `https://yourusername.github.io/repository-name/`
+All episodes are currently marked as "Coming Soon" as we prepare for our official launch. The website is being updated to reflect this status.
 
-## Structure
+## Future Enhancements
 
-- `index.html` - Home page with hero section, features, latest episodes, and signup form
-- `episodes.html` - List of podcast episodes
-- `about.html` - Information about the podcast and hosts
-- `css/style.css` - Custom styles
-- `js/main.js` - JavaScript functionality
+- Dynamic episode loading from a CMS
+- Comments section for each episode
+- Audio player integration
+- Search functionality
+- Analytics integration
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any questions or feedback, please open an issue in this repository.
+
+---
+
+Last updated: March 27, 2025 - Episodes updated to show "Coming Soon" status
