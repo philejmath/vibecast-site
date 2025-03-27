@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibecast.me - The Podcast About Technology and AI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Vibecast.me - A podcast exploring technology, AI, and the future of work">
+    <meta name="keywords" content="podcast, technology, AI, future of work, tech podcast">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-podcast me-2"></i>Vibecast.me
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="episodes.html">Episodes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-3">Welcome to Vibecast.me</h1>
+                    <p class="lead mb-4">A podcast exploring technology, AI, and the future of work</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="#signup" class="btn btn-primary btn-lg px-4 gap-3">Subscribe Now</a>
+                        <a href="episodes.html" class="btn btn-outline-light btn-lg px-4">Latest Episodes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box p-4 rounded shadow-sm">
+                        <i class="fas fa-microphone-alt fa-3x mb-3 text-primary"></i>
+                        <h3>Weekly Episodes</h3>
+                        <p>New episodes every Thursday exploring the latest in technology and AI.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box p-4 rounded shadow-sm">
+                        <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                        <h3>Expert Guests</h3>
+                        <p>Interviews with industry leaders and innovators in tech and AI.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box p-4 rounded shadow-sm">
+                        <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                        <h3>Insightful Analysis</h3>
+                        <p>Deep dives into how technology is changing our work and lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Episodes Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Episodes</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">New</span>
+                            <h4 class="card-title">Episode 2: AI and the Future of Work</h4>
+                            <p class="text-muted">March 27, 2025</p>
+                            <p class="card-text">We dive into how AI is changing the landscape of work, particularly in tech and creative fields.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-sm btn-outline-primary">Listen Now</a>
+                                <div class="text-muted">
+                                    <small>45 min</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Episode 1: Introduction to Vibecast.me</h4>
+                            <p class="text-muted">March 20, 2025</p>
+                            <p class="card-text">In our first episode, we introduce the Vibecast.me podcast and discuss what listeners can expect.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-sm btn-outline-primary">Listen Now</a>
+                                <div class="text-muted">
+                                    <small>38 min</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="episodes.html" class="btn btn-primary">View All Episodes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-4">Subscribe to Vibecast.me</h2>
+                    <p class="mb-4">Sign up to receive updates about new episodes and exclusive content.</p>
+                    <form id="signup-form" class="signup-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+                        </div>
+                        <p class="mt-3 text-muted small">We'll never share your email with anyone else.</p>
+                    </form>
+                    <div id="signup-success" class="alert alert-success mt-3 d-none">
+                        Thanks for subscribing! We'll be in touch soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listen On Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Listen On</h2>
+            <div class="row justify-content-center text-center">
+                <div class="col-6 col-md-2 mb-4">
+                    <a href="#" class="platform-link">
+                        <i class="fab fa-spotify fa-3x mb-2"></i>
+                        <p>Spotify</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <a href="#" class="platform-link">
+                        <i class="fab fa-apple fa-3x mb-2"></i>
+                        <p>Apple Podcasts</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <a href="#" class="platform-link">
+                        <i class="fab fa-google fa-3x mb-2"></i>
+                        <p>Google Podcasts</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <a href="#" class="platform-link">
+                        <i class="fas fa-podcast fa-3x mb-2"></i>
+                        <p>Overcast</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <a href="#" class="platform-link">
+                        <i class="fab fa-youtube fa-3x mb-2"></i>
+                        <p>YouTube</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Vibecast.me</h5>
+                    <p class="mb-0">A podcast exploring technology, AI, and the future of work.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="episodes.html" class="text-white">Episodes</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Vibecast.me. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
