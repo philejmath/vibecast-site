@@ -1,50 +1,44 @@
-# Vibcast Website
+# Vibecast.me
 
-A static website for the Vibcast podcast, built with HTML, CSS, and JavaScript. This site is designed to be hosted on GitHub Pages.
+A modern podcast website about technology, AI, and the future of work.
+
+## Overview
+
+Vibecast.me is a podcast website built with HTML, CSS, and JavaScript. It features a responsive design, episode listings, and a subscription form.
 
 ## Features
 
-- Responsive design that works on mobile, tablet, and desktop
-- Modern, clean UI with Bootstrap 5
-- Newsletter signup form
-- Episode listings
+- Responsive design using Bootstrap 5
+- Episode listings (coming soon)
 - About page with team information
+- Email subscription form
+- Social media integration
+- Cross-browser compatibility
+
+## Pages
+
+- **Home**: Main landing page with features and upcoming episodes
+- **Episodes**: List of upcoming podcast episodes
+- **About**: Information about the podcast and hosts
 
 ## Development
 
-This is a simple static website that can be developed locally and deployed to GitHub Pages.
+### Prerequisites
+
+- Any modern web browser
+- Basic knowledge of HTML, CSS, and JavaScript
 
 ### Local Development
 
-To preview the site locally, you can use any simple HTTP server. For example, with Python:
+1. Clone the repository
+2. Open any HTML file in your browser to view the site
+3. Edit files using your preferred code editor
 
-```bash
-# Python 3
-python -m http.server
+## Deployment
 
-# Python 2
-python -m SimpleHTTPServer
-```
-
-Then visit `http://localhost:8000` in your browser.
-
-### Deployment
-
-To deploy to GitHub Pages:
-
-1. Push this repository to GitHub
-2. Go to the repository settings
-3. Under "GitHub Pages", select the branch you want to deploy from (usually `main` or `master`)
-4. The site will be available at `https://yourusername.github.io/repository-name/`
-
-## Structure
-
-- `index.html` - Home page with hero section, features, latest episodes, and signup form
-- `episodes.html` - List of podcast episodes
-- `about.html` - Information about the podcast and hosts
-- `css/style.css` - Custom styles
-- `js/main.js` - JavaScript functionality
+The site is deployed on GitHub Pages and can be accessed at:
+https://philejmath.github.io/vibecast-site/
 
 ## License
 
-MIT
+© 2025 Vibecast.me. All rights reserved.
