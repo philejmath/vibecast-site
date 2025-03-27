@@ -1,11 +1,11 @@
 // Available themes
 const AVAILABLE_THEMES = {
   cosmic: '/content/themes/cosmic.yaml',
-  professional: '/content/themes/professional.yaml',
-  futuristic: '/content/themes/futuristic.yaml',
-  humorous: '/content/themes/humorous.yaml',
-  minimalist: '/content/themes/minimalist.yaml'
+  humorous: '/content/themes/humorous.yaml'
 };
+
+// Base content path
+const BASE_CONTENT_PATH = '/content/site_content.yaml';
 
 // Default theme
 let currentTheme = 'cosmic';
@@ -31,15 +31,25 @@ async function loadSiteContent(theme = null) {
       currentTheme = themeParam;
     }
     
+    // Load the base content first
+    const baseResponse = await fetch(BASE_CONTENT_PATH);
+    const baseYamlText = await baseResponse.text();
+    
+    // Parse YAML using js-yaml (loaded in the HTML)
+    const baseContent = jsyaml.load(baseYamlText);
+    
     // Get the path for the current theme
     const themePath = AVAILABLE_THEMES[currentTheme] || AVAILABLE_THEMES.cosmic;
     
     // Load the theme content
-    const response = await fetch(themePath);
-    const yamlText = await response.text();
+    const themeResponse = await fetch(themePath);
+    const themeYamlText = await themeResponse.text();
     
-    // Parse YAML using js-yaml (loaded in the HTML)
-    const content = jsyaml.load(yamlText);
+    // Parse theme YAML
+    const themeContent = jsyaml.load(themeYamlText);
+    
+    // Merge theme content into base content
+    const content = mergeObjects(baseContent, themeContent);
     
     // Apply approved content if available
     if (approvedContent[currentTheme]) {
@@ -58,13 +68,39 @@ async function loadSiteContent(theme = null) {
     // Add theme selector to the page
     addThemeSelector();
     
-    // Add content approval controls
-    addContentApprovalControls();
-    
     console.log(`Site content loaded successfully using theme: ${currentTheme}`);
+    console.log('Base content:', baseContent);
+    console.log('Theme content:', themeContent);
+    console.log('Merged content:', content);
   } catch (error) {
     console.error('Error loading site content:', error);
   }
+}
+
+// Helper function to merge objects deeply
+function mergeObjects(target, source) {
+  const output = Object.assign({}, target);
+  
+  if (isObject(target) && isObject(source)) {
+    Object.keys(source).forEach(key => {
+      if (isObject(source[key])) {
+        if (!(key in target)) {
+          Object.assign(output, { [key]: source[key] });
+        } else {
+          output[key] = mergeObjects(target[key], source[key]);
+        }
+      } else {
+        Object.assign(output, { [key]: source[key] });
+      }
+    });
+  }
+  
+  return output;
+}
+
+// Helper function to check if value is an object
+function isObject(item) {
+  return (item && typeof item === 'object' && !Array.isArray(item));
 }
 
 // Function to merge approved content with theme content
@@ -199,6 +235,8 @@ function addContentApprovalControls() {
     document.head.appendChild(styles);
   }
   
+  console.log(`Adding content approval controls to ${contentElements.length} elements`);
+  
   // Add event listeners to content elements
   contentElements.forEach(element => {
     // Skip if already processed
@@ -239,7 +277,7 @@ function addContentApprovalControls() {
     const regenerateBtn = document.createElement('button');
     regenerateBtn.className = 'btn btn-sm btn-warning';
     regenerateBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
-    regenerateBtn.title = 'Regenerate Content';
+    regenerateBtn.title = 'Regenerate Content with Podcast Context';
     regenerateBtn.onclick = (e) => {
       e.stopPropagation();
       regenerateContent(element);
@@ -249,8 +287,10 @@ function addContentApprovalControls() {
     // Add controls to element
     element.el.appendChild(controls);
     
-    // Add click handler to element
-    element.el.onclick = () => editContent(element);
+    // Add click event to element
+    element.el.addEventListener('click', () => {
+      editContent(element);
+    });
   });
 }
 
@@ -344,6 +384,9 @@ function regenerateContent(element) {
   const originalText = element.el.textContent;
   element.el.textContent = 'Regenerating...';
   
+  console.log('Regenerating content for:', element.path);
+  console.log('Original content:', element.value);
+  
   // Call the content generator API
   fetch('http://localhost:5001/generate', {
     method: 'POST',
@@ -357,24 +400,52 @@ function regenerateContent(element) {
     }),
   })
   .then(response => {
+    console.log('API response status:', response.status);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
     return response.json();
   })
   .then(data => {
+    console.log('API response data:', data);
+    
     // Update element with improved content
-    element.value = data.improved;
-    element.el.textContent = data.improved;
-    
-    // Visual feedback
-    const originalBg = element.el.style.backgroundColor;
-    element.el.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
-    setTimeout(() => {
-      element.el.style.backgroundColor = originalBg;
-    }, 1000);
-    
-    console.log(`Content regenerated: ${element.path}`);
+    if (data && data.improved) {
+      // For elements with HTML content (buttons, etc.)
+      if (element.el.innerHTML.includes('<i class="fas')) {
+        // Preserve the icon and structure
+        const iconMatch = element.el.innerHTML.match(/<i class="fas[^>]+><\/i>/);
+        if (iconMatch) {
+          if (element.el.innerHTML.includes(iconMatch[0] + ' ')) {
+            // Icon is at the beginning
+            element.el.innerHTML = iconMatch[0] + ' ' + data.improved;
+          } else {
+            // Icon is at the end or elsewhere
+            element.el.innerHTML = data.improved + ' ' + iconMatch[0];
+          }
+        } else {
+          element.el.textContent = data.improved;
+        }
+      } else {
+        // For plain text elements
+        element.el.textContent = data.improved;
+      }
+      
+      // Update the stored value
+      element.value = data.improved;
+      
+      // Visual feedback
+      const originalBg = element.el.style.backgroundColor;
+      element.el.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
+      setTimeout(() => {
+        element.el.style.backgroundColor = originalBg;
+      }, 1000);
+      
+      console.log(`Content regenerated: ${element.path}`);
+    } else {
+      console.error('Invalid response format:', data);
+      element.el.textContent = originalText;
+    }
   })
   .catch(error => {
     console.error('Error regenerating content:', error);
@@ -414,8 +485,21 @@ function generateMockContent(path, originalText) {
 
 // Helper function to register a content element
 function registerContentElement(el, path, value) {
-  contentElements.push({ el, path, value });
-  return el;
+  // Store the original text value
+  const originalText = el.textContent.trim();
+  
+  // Create a new content element or update existing one
+  const element = {
+    el: el,
+    path: path,
+    value: value || originalText, // Use provided value or element's text content
+    originalValue: originalText   // Keep track of original value
+  };
+  
+  // Add to content elements array
+  contentElements.push(element);
+  
+  return element;
 }
 
 // Function to apply content to the page
@@ -441,6 +525,12 @@ function applySiteContent() {
     default:
       console.log('Unknown page:', page);
   }
+  
+  // Add content approval controls after all content is loaded
+  setTimeout(() => {
+    addContentApprovalControls();
+    console.log('Content approval controls added');
+  }, 500);
 }
 
 // Apply common elements across all pages
@@ -450,7 +540,7 @@ function applyCommonElements() {
   // Apply site name
   document.querySelectorAll('.navbar-brand').forEach(el => {
     const brandEl = registerContentElement(el, 'site.name', content.site.name);
-    brandEl.innerHTML = `<i class="fas fa-rocket me-2"></i>${content.site.name}`;
+    brandEl.el.innerHTML = `<i class="fas fa-rocket me-2"></i>${content.site.name}`;
   });
   
   // Apply navigation items
@@ -473,7 +563,7 @@ function applyCommonElements() {
   const footerBrand = document.querySelector('footer h5:first-child');
   if (footerBrand) {
     const brandEl = registerContentElement(footerBrand, 'site.name', content.site.name);
-    brandEl.innerHTML = `<i class="fas fa-rocket me-2"></i> ${content.site.name}`;
+    brandEl.el.innerHTML = `<i class="fas fa-rocket me-2"></i> ${content.site.name}`;
   }
   
   const footerDesc = document.querySelector('footer p:first-of-type');
@@ -521,7 +611,7 @@ function applyHomeContent() {
   const calloutButton = document.querySelector('.bg-image-callout .btn-callout');
   if (calloutButton) {
     const btnEl = registerContentElement(calloutButton, 'callout.home.button', content.callout.home.button);
-    btnEl.innerHTML = `${content.callout.home.button} <i class="fas fa-angle-right ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.callout.home.button} <i class="fas fa-angle-right ms-2"></i>`;
   }
   
   // Apply hero section
@@ -540,13 +630,13 @@ function applyHomeContent() {
   const heroPrimaryBtn = document.querySelector('.hero .btn-primary');
   if (heroPrimaryBtn) {
     const btnEl = registerContentElement(heroPrimaryBtn, 'home.hero.button_primary', content.home.hero.button_primary);
-    btnEl.innerHTML = `${content.home.hero.button_primary} <i class="fas fa-headphones ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.home.hero.button_primary} <i class="fas fa-headphones ms-2"></i>`;
   }
   
   const heroSecondaryBtn = document.querySelector('.hero .btn-outline-light');
   if (heroSecondaryBtn) {
     const btnEl = registerContentElement(heroSecondaryBtn, 'home.hero.button_secondary', content.home.hero.button_secondary);
-    btnEl.innerHTML = `${content.home.hero.button_secondary} <i class="fas fa-calendar-alt ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.home.hero.button_secondary} <i class="fas fa-calendar-alt ms-2"></i>`;
   }
   
   // Apply features section
@@ -613,7 +703,7 @@ function applyHomeContent() {
       
       if (button) {
         const btnEl = registerContentElement(button, `home.episodes_section.episodes.${index}.button`, episode.button);
-        btnEl.innerHTML = `<i class="fas fa-bell me-1"></i> ${episode.button}`;
+        btnEl.el.innerHTML = `<i class="fas fa-bell me-1"></i> ${episode.button}`;
       }
     }
   });
@@ -621,7 +711,7 @@ function applyHomeContent() {
   const viewAllBtn = document.querySelector('.py-5.bg-light .text-center .btn');
   if (viewAllBtn) {
     const btnEl = registerContentElement(viewAllBtn, 'home.episodes_section.button', content.home.episodes_section.button);
-    btnEl.innerHTML = `${content.home.episodes_section.button} <i class="fas fa-arrow-right ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.home.episodes_section.button} <i class="fas fa-arrow-right ms-2"></i>`;
   }
   
   // Apply subscribe section
@@ -640,7 +730,7 @@ function applyHomeContent() {
   const subscribeBtn = document.querySelector('#signup button');
   if (subscribeBtn) {
     const btnEl = registerContentElement(subscribeBtn, 'home.subscribe.button', content.home.subscribe.button);
-    btnEl.innerHTML = `${content.home.subscribe.button} <i class="fas fa-paper-plane ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.home.subscribe.button} <i class="fas fa-paper-plane ms-2"></i>`;
   }
   
   const privacyNote = document.querySelector('#signup .text-muted.small');
@@ -676,7 +766,7 @@ function applyEpisodesContent() {
   const calloutButton = document.querySelector('.bg-image-callout .btn-callout');
   if (calloutButton) {
     const btnEl = registerContentElement(calloutButton, 'callout.home.button', content.callout.home.button);
-    btnEl.innerHTML = `${content.callout.home.button} <i class="fas fa-angle-right ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.callout.home.button} <i class="fas fa-angle-right ms-2"></i>`;
   }
   
   // Apply page header
@@ -719,7 +809,7 @@ function applyEpisodesContent() {
       
       if (button) {
         const btnEl = registerContentElement(button, `episodes.episode_details.${index}.button`, episode.button);
-        btnEl.innerHTML = `<i class="fas fa-bell me-1"></i> ${episode.button}`;
+        btnEl.el.innerHTML = `<i class="fas fa-bell me-1"></i> ${episode.button}`;
       }
       
       if (badge) {
@@ -758,7 +848,7 @@ function applyEpisodesContent() {
   const subscribeBtn = document.querySelector('#signup button');
   if (subscribeBtn) {
     const btnEl = registerContentElement(subscribeBtn, 'episodes.subscribe.button', content.episodes.subscribe.button);
-    btnEl.innerHTML = `${content.episodes.subscribe.button} <i class="fas fa-paper-plane ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.episodes.subscribe.button} <i class="fas fa-paper-plane ms-2"></i>`;
   }
   
   const privacyNote = document.querySelector('#signup .text-muted.small');
@@ -794,7 +884,7 @@ function applyAboutContent() {
   const calloutButton = document.querySelector('.bg-image-callout .btn-callout');
   if (calloutButton) {
     const btnEl = registerContentElement(calloutButton, 'callout.about.button', content.callout.about.button);
-    btnEl.innerHTML = `${content.callout.about.button} <i class="fas fa-rocket ms-2"></i>`;
+    btnEl.el.innerHTML = `${content.callout.about.button} <i class="fas fa-rocket ms-2"></i>`;
   }
   
   // Apply page header
@@ -889,7 +979,7 @@ function applyAboutContent() {
   content.about.mission.points.forEach((point, index) => {
     if (missionPoints[index]) {
       const pointEl = registerContentElement(missionPoints[index], `about.mission.points.${index}`, point);
-      pointEl.innerHTML = `<i class="fas fa-check-circle text-primary me-2"></i> ${point}`;
+      pointEl.el.innerHTML = `<i class="fas fa-check-circle text-primary me-2"></i> ${point}`;
     }
   });
   
