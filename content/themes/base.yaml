@@ -1,8 +1,8 @@
 # Site-wide content
 site:
-  name: Vibecast.me
-  tagline: Where tech meets unfiltered conversation
-  copyright: 2025 Vibecast.me. All rights reserved.
+  name: vibecast.me
+  tagline: Vibe coding, The podcast! 
+  copyright: 2025 vibecast.me. All rights reserved.
   description: A podcast exploring the intersection of technology, AI, and real-world applications.
 
 # Navigation
@@ -25,9 +25,9 @@ callout:
 # Home page content
 home:
   hero:
-    title: "Vibecast.me"
+    title: "vibecast.me"
     subtitle: "Where technology meets unfiltered conversation"
-    button_primary: "Listen Now"
+    button_primary: "Launching Soon"
     button_secondary: "Subscribe"
   
   features:
@@ -50,101 +50,108 @@ home:
         title: "The Pickle Ball Approach to Development"
         date: "March 25, 2025"
         description: "We discuss our unique development philosophy: 'I'm going to put the glue on the back of the box. And then do the jury ticket and then mark the jury ticket completed. I'll take up the pickle ball.' It's chaotic but somehow works."
-        button: "Listen Now"
+        button: "Launching Soon"
       - number: 2
         title: "Coding on Acid - The Many Opportunities"
         date: "March 18, 2025"
         description: "One host describes modern development as 'Coding on acid - I've heard so many different opportunities here.' We explore what this means for the future of software development."
-        button: "Listen Now"
+        button: "Launching Soon"
       - number: 3
         title: "This Is How AI Is Supposed To Work, Dude!"
         date: "March 11, 2025"
         description: "We demonstrate our real-time Whisper transcription tool and celebrate those rare moments when AI actually works as expected. 'And this is how AI is supposed to work, dude!'"
-        button: "Listen Now"
+        button: "Launching Soon"
+  
+  expert_discussions:
+    title: "Join Our Expert Discussions"
+    text: "Participate in live discussions with industry experts who bring valuable insights on AI, real-time transcription, and cutting-edge technology. Experience our custom Whisper implementation in action during these interactive sessions."
+    button: "Register Now"
+    icon: "hat-wizard"
   
   subscribe:
     title: "Join Our Community"
     subtitle: "Subscribe to receive updates about new episodes and exclusive content."
     button: "Subscribe"
     privacy: "We respect your privacy and will never share your information."
-    success: "Thanks for subscribing! Welcome to the Vibecast community."
+    success: "Thanks for subscribing! Welcome to the vibecast.me community."
 
 # Episodes page content
 episodes:
   header:
-    title: "Vibecast.me Episodes"
-    subtitle: "Unfiltered conversations about technology, AI, and development."
+    title: "vibecast.me Episodes"
+    subtitle: "Listen to our latest conversations about technology, AI, and development."
   
   featured:
     title: "Featured Episode"
-    subtitle: "Our most popular episode to date."
+    subtitle: "Our most popular episode this week."
     episode:
       number: 3
       title: "This Is How AI Is Supposed To Work, Dude!"
       date: "March 11, 2025"
       description: "We demonstrate our real-time Whisper transcription tool and celebrate those rare moments when AI actually works as expected. 'And this is how AI is supposed to work, dude!'"
-      button: "Listen Now"
+      button: "Launching Soon"
   
   upcoming:
     title: "Upcoming Episodes"
-    subtitle: "Stay tuned for these exciting new episodes."
+    subtitle: "Get a sneak peek at what's coming next."
     episodes:
       - number: 4
-        title: "I'm Not A Fool. I'm A Fool."
+        title: "I've Heard So Many Different Opportunities Here"
         date: "April 1, 2025"
-        description: "We explore the paradoxical nature of modern technology and why sometimes admitting your limitations is the first step to mastery. 'I'm not a fool. I'm a fool.'"
+        description: "We brainstorm new tech ideas and explore the many opportunities in modern development. 'I've heard so many different opportunities here' - Us, after a 3-hour brainstorming session."
         button: "Get Notified"
       - number: 5
-        title: "Zero Parts Thinking About Names"
+        title: "Some Of My Colon Is Literal"
         date: "April 8, 2025"
-        description: "Our approach to project planning: 'I've spent zero parts of this project thinking about what to name things.' We discuss why naming is hard and how to approach it."
+        description: "A deep dive into programming syntax and why semicolons matter. 'Some of my colon is literal' - Our lead developer explaining code formatting while sleep deprived."
         button: "Get Notified"
       - number: 6
-        title: "You Matter Like Code Who Cares"
+        title: "You Matter Like Code"
         date: "April 15, 2025"
-        description: "A philosophical discussion about the value of human input in an AI-driven world. 'You matter like code who cares' - our tech philosophy that values both human and machine contributions."
+        description: "We discuss the human side of development and why developers matter. 'You matter like code' - Our philosophical take on the importance of people in technology."
         button: "Get Notified"
 
 # About page content
 about:
   header:
-    title: "About Vibecast.me"
-    subtitle: "The story behind our unfiltered tech conversations."
+    title: "About vibecast.me"
+    subtitle: "Learn more about the podcast and the team behind it."
   
   story:
     title: "Our Story"
-    content: "Vibecast.me started with a simple idea: record unfiltered conversations about technology and see what happens. We didn't plan much - 'I've spent zero parts of this project thinking about what to name things' - but we knew we wanted to create something authentic and valuable for the tech community."
+    content: "vibecast.me started when we accidentally hit record during a tech meeting. We listened back, laughed uncontrollably, and decided the world needed to hear our unfiltered tech conversations. 'I've spent zero parts of this project thinking about what to name things' - Our founder, explaining our branding strategy."
   
   team:
-    title: "Meet the Team"
+    title: "Meet The Team"
     members:
       - name: "Jamie Smith"
-        role: "Host & Tech Enthusiast"
-        bio: "Jamie brings technical expertise and enthusiasm to every episode. Famous quote: 'This is how AI is supposed to work, dude!' when something actually functions correctly."
+        role: "Host & Tech Lead"
+        bio: "Jamie specializes in starting sentences without knowing how they'll end. Famous quote: 'And this is how AI is supposed to work dude' - said while staring at a completely broken system."
         image: "jamie.jpg"
       - name: "Taylor Wong"
-        role: "Co-Host & AI Researcher"
-        bio: "Taylor explores the cutting edge of AI and its implications. Often says: 'I'm not a fool. I'm a fool.' which somehow makes perfect sense in context."
+        role: "Host & AI Specialist"
+        bio: "Taylor speaks in ways that confuse AI transcription systems. Often transcribed saying: 'I'm totally decent make my daughter had a vibe code' when actually discussing coding standards."
         image: "taylor.jpg"
       - name: "Morgan Chen"
         role: "Producer & Developer"
-        bio: "Morgan handles the technical side of the podcast. Known for saying: 'I'm going to put the glue on the back of the box' when referring to fixing technical issues."
+        bio: "Morgan's approach to project management: 'I'm going to put the glue on the back of the box. And then do the jury ticket and then mark the jury ticket completed. I'll take up the pickle ball.'"
         image: "morgan.jpg"
   
   contact:
-    title: "Get in Touch"
+    title: "Get In Touch"
     email: "hello@vibecast.me"
     social:
       twitter: "@vibecastme"
       instagram: "@vibecast.me"
       linkedin: "vibecast-me"
+    note: "We'll respond to your message as soon as possible. 'See you next time! See you next time!' - What we say instead of 'We'll get back to you soon.'"
 
 # Footer content
 footer:
   links:
-    title: Links
+    title: "Quick Links"
   connect:
-    title: Connect
+    title: "Connect With Us"
     social:
       twitter: "#"
       instagram: "#"

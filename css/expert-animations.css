@@ -1,0 +1,95 @@
+/* Expert Discussions Animations
+ * This file contains animations for the Expert Discussions section
+ * with the wizard icon (fa-hat-wizard) from Font Awesome.
+ */
+
+/* Wizard icon glow effect */
+@keyframes wizard-glow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(138, 43, 226, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.7));
+    transform: scale(1.05);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(138, 43, 226, 0.4));
+    transform: scale(1);
+  }
+}
+
+/* Subtle float animation for the wizard icon */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply animations to the wizard icon */
+.expert-icon .fa-hat-wizard {
+  animation: wizard-glow 3s infinite ease-in-out, 
+             float 6s infinite ease-in-out;
+  color: #8a2be2; /* Purple color for the wizard hat */
+}
+
+/* Hover effect for the icon */
+.expert-icon:hover .fa-hat-wizard {
+  animation: wizard-glow 1s infinite ease-in-out;
+  color: #9932cc; /* Darker purple on hover */
+}
+
+/* Button animation for "Register Now" */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(138, 43, 226, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+  }
+}
+
+/* Apply pulse animation to the Register Now button */
+.expert-button {
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.expert-button:hover {
+  animation: none;
+  transform: scale(1.05);
+  background-color: #8a2be2 !important;
+}
+
+/* Theme-specific variations */
+body.theme-cosmic .expert-icon .fa-hat-wizard {
+  color: #00bfff; /* Deep sky blue for cosmic theme */
+  animation: wizard-glow 3s infinite ease-in-out, 
+             float 6s infinite ease-in-out;
+}
+
+body.theme-cosmic .expert-button:hover {
+  background-color: #00bfff !important;
+}
+
+body.theme-humorous .expert-icon .fa-hat-wizard {
+  color: #ff6347; /* Tomato color for humorous theme */
+  animation: wizard-glow 3s infinite ease-in-out, 
+             float 4s infinite ease-in-out;
+}
+
+body.theme-humorous .expert-button:hover {
+  background-color: #ff6347 !important;
+}

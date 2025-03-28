@@ -2,9 +2,9 @@
 # Fresh version with new quotes from transcription
 
 site:
-  name: Vibecast.me
+  name: vibecast.me
   tagline: A podcast where we say "Oh my God" at least 50 times per episode
-  copyright: 2025 Vibecast.me. All rights reserved. (We think. We're not lawyers.)
+  copyright: 2025 vibecast.me. All rights reserved. (We think. We're not lawyers.)
   description: A podcast about technology, AI, and why we can't stop saying "Oh my God" repeatedly.
 
 # Navigation
@@ -27,9 +27,9 @@ callout:
 # Home page content
 home:
   hero:
-    title: "Vibecast.me"
+    title: "vibecast.me"
     subtitle: "A podcast for people who think 'I'm totally decent make my daughter had a vibe code' is a reasonable sentence"
-    button_primary: "Listen If You Dare"
+    button_primary: "Eventually Maybe"
     button_secondary: "Run Away Screaming"
   
   features:
@@ -52,17 +52,23 @@ home:
         title: "Some Of My Colon Is Literal"
         date: "March 25, 2025"
         description: "A deep dive into programming syntax and why semicolons matter. 'Some of my colon is literal' - Our lead developer explaining code formatting while sleep deprived."
-        button: "Listen Now"
+        button: "Still Recording"
       - number: 2
         title: "I'm Not A Fool. I'm A Fool."
         date: "March 18, 2025"
         description: "The paradoxical nature of modern tech work. 'I'm not a fool. I'm a fool.' - Our most profound insight to date, according to our listeners."
-        button: "Listen Now"
+        button: "Lost the Audio"
       - number: 3
         title: "Definitely Episode 2 Is Like Live Coding The Strangers"
         date: "March 11, 2025"
         description: "We attempt to code with random people from the internet. 'Definitely episode 2 is like live coding the strangers.' - Us, completely mixing up our episode numbers."
-        button: "Listen Now"
+        button: "Exists in Theory"
+  
+  expert_discussions:
+    title: "Join Our So-Called 'Experts'"
+    text: "Participate in live discussions with people who claim to be experts but are just as confused as you are. Watch in real-time as our Whisper transcription completely misunderstands everything they say!"
+    button: "Enter At Your Own Risk"
+    icon: "hat-wizard"
   
   subscribe:
     title: "Join Our Support Group"
@@ -85,7 +91,7 @@ episodes:
       title: "We Just AI In A Calendar And That's Just The Key To The Film"
       date: "March 11, 2025"
       description: "We have no idea what 'We just AI in a calendar and that's just the key to the film. Always falling off' means, but it was transcribed from our podcast, so we made it an episode title."
-      button: "Listen Now"
+      button: "Coming Soon"
   
   upcoming:
     title: "Future Therapy Sessions"

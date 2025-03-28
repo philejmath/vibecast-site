@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibecast.me - The Podcast About Technology and AI</title>
+    <title class="site-name">vibecast.me</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/expert-animations.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Meta tags for SEO -->
-    <meta name="description" content="Vibecast.me is a podcast exploring technology, AI, and the future of work">
-    <meta name="keywords" content="podcast, technology, AI, future of work, tech podcast">
+    <meta name="description" content="vibecast.me is a podcast exploring technology, AI, and the future of work">
+    <meta name="keywords" content="podcast, technology, AI, future of work, tech podcast, coding">
     <!-- js-yaml for YAML parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
@@ -19,8 +20,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-rocket me-2"></i>Vibecast.me
+            <a class="navbar-brand site-name" href="index.html">
+                <i class="fas fa-rocket me-2"></i>vibecast.me
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -28,13 +29,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active navigation-home" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="episodes.html">Episodes</a>
+                        <a class="nav-link navigation-episodes" href="episodes.html">Episodes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link navigation-about" href="about.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -47,9 +48,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <i class="fas fa-hat-wizard wizard-icon"></i>
-                    <h2 class="callout-heading">Join Our Cosmic Tech Adventure</h2>
-                    <p class="callout-text">Where tech conversations are as wild as monkeys riding sharks on Mars! Join our live discussions with industry experts who bring cosmic levels of insight to AI and technology.</p>
-                    <a href="#signup" class="btn btn-lg btn-callout">Ride the Shark <i class="fas fa-angle-right ms-2"></i></a>
+                    <h2 class="callout-home-title">Join Our Cosmic Tech Adventure</h2>
+                    <p class="callout-home-text">Where tech conversations are as wild as monkeys riding sharks on Mars! Join our live discussions with industry experts who bring cosmic levels of insight to AI and technology.</p>
+                    <a href="#signup" class="btn btn-lg btn-callout callout-home-button">Ride the Shark <i class="fas fa-angle-right ms-2"></i></a>
                 </div>
             </div>
         </div>
@@ -60,10 +61,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h1 class="display-3 fw-bold mb-3">Welcome to Vibecast.me</h1>
-                    <p class="lead mb-4">A podcast exploring technology, AI, and the future of work</p>
-                    <a href="#signup" class="btn btn-primary btn-lg">Subscribe Now <i class="fas fa-headphones ms-2"></i></a>
-                    <a href="episodes.html" class="btn btn-outline-light btn-lg ms-2">Coming Soon <i class="fas fa-calendar-alt ms-2"></i></a>
+                    <h1 class="display-3 fw-bold mb-3 home-hero-title">Welcome to vibecast.me</h1>
+                    <p class="lead mb-4 home-hero-subtitle">A podcast exploring technology, AI, and the future of work</p>
+                    <a href="#signup" class="btn btn-primary btn-lg home-hero-button_primary">Subscribe Now <i class="fas fa-headphones ms-2"></i></a>
+                    <a href="episodes.html" class="btn btn-outline-light btn-lg ms-2 home-hero-button_secondary">Coming Soon <i class="fas fa-calendar-alt ms-2"></i></a>
                 </div>
             </div>
         </div>
@@ -74,24 +75,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="feature-box p-4 text-center">
-                        <i class="fas fa-calendar-week feature-icon mb-3"></i>
-                        <h3 class="h4 mb-3">Weekly Episodes</h3>
-                        <p>New episodes every Thursday exploring the latest in technology and AI.</p>
+                    <div class="feature-card text-center p-4 h-100">
+                        <i class="fas fa-microphone-alt fa-2x mb-3"></i>
+                        <h3 class="home-features-0-title">Unscripted Tech Talk</h3>
+                        <p class="home-features-0-description">Raw, unfiltered conversations about technology and AI. As one host says: 'This is how AI is supposed to work, dude!' when something actually functions as intended.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="feature-box p-4 text-center">
-                        <i class="fas fa-hat-wizard feature-icon mb-3"></i>
-                        <h3 class="h4 mb-3">Expert Guests</h3>
-                        <p>Interviews with industry leaders and innovators in tech and AI.</p>
+                    <div class="feature-card text-center p-4 h-100">
+                        <i class="fas fa-file-alt fa-2x mb-3"></i>
+                        <h3 class="home-features-1-title">Real-Time Transcription</h3>
+                        <p class="home-features-1-description">Exploring cutting-edge speech recognition with our custom Whisper implementation. 'I'm totally decent make my daughter had a vibe code' - what our AI thinks we're saying.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature-box p-4 text-center">
-                        <i class="fas fa-lightbulb feature-icon mb-3"></i>
-                        <h3 class="h4 mb-3">Insightful Analysis</h3>
-                        <p>Deep dives into how technology is changing our work and lives.</p>
+                    <div class="feature-card text-center p-4 h-100">
+                        <i class="fas fa-code fa-2x mb-3"></i>
+                        <h3 class="home-features-2-title">Developer Insights</h3>
+                        <p class="home-features-2-description">Honest discussions about coding and development. 'Free software developer work is all knows that you optimize for writing because you write code once and you read it never.'</p>
                     </div>
                 </div>
             </div>
@@ -99,72 +100,67 @@
     </section>
 
     <!-- Episodes Section -->
-    <section class="py-5 bg-light">
+    <section id="episodes-section" class="py-5 bg-light">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-3">Coming Soon</h2>
-                    <p class="lead">Our first episodes are in production and will be launching soon! Get ready for tech talk with a side of unfiltered humor.</p>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="home-episodes_section-title">Latest Episodes</h2>
+                    <p class="lead home-episodes_section-subtitle">Join our conversations about technology, AI, and the future of development.</p>
                 </div>
             </div>
             <div class="row">
-                <!-- Coming Soon: Episode 1 -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-microphone-alt text-primary me-3" style="font-size: 2rem;"></i>
-                                <div>
-                                    <h3 class="card-title h5 mb-1">Coming Soon: Episode 1</h3>
-                                    <p class="text-muted small mb-0">Expected: April 3, 2025</p>
-                                </div>
-                            </div>
-                            <p class="card-text">"AI and the Art of Forgetting How to Use It" - Join us as we explore the hilarious reality of working with AI tools while constantly forgetting how to use them. As one host confesses: "Some of my colon is literal." We'll discuss the modern tech paradox: powerful tools that we keep forgetting how to use properly.</p>
-                            <a href="#signup" class="btn btn-sm btn-outline-primary mt-2">
-                                <i class="fas fa-bell me-1"></i> Get Notified
-                            </a>
+                <div class="col-md-4 mb-4">
+                    <div class="card episode-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2 home-episodes_section-episodes-0-number">Episode 1</span>
+                            <h5 class="card-title home-episodes_section-episodes-0-title">The Pickle Ball Approach to Development</h5>
+                            <p class="card-text text-muted home-episodes_section-episodes-0-date">March 25, 2025</p>
+                            <p class="card-text home-episodes_section-episodes-0-description">In this inaugural episode, we discuss how the game of pickle ball relates to software development methodologies and why it matters.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary home-episodes_section-episodes-0-button">Listen <i class="fas fa-headphones ms-1"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- Coming Soon: Episode 2 -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-microphone-alt text-primary me-3" style="font-size: 2rem;"></i>
-                                <div>
-                                    <h3 class="card-title h5 mb-1">Coming Soon: Episode 2</h3>
-                                    <p class="text-muted small mb-0">Expected: April 10, 2025</p>
-                                </div>
-                            </div>
-                            <p class="card-text">"The Future of Development: When AI Does the Coding" - We'll debate whether there's still a future for human developers. As one host memorably quipped: "Time to quit school. This is all pointless." Plus, we'll explore what one host calls "Coding on acid - I've heard so many different opportunities here."</p>
-                            <a href="#signup" class="btn btn-sm btn-outline-primary mt-2">
-                                <i class="fas fa-bell me-1"></i> Get Notified
-                            </a>
+                <div class="col-md-4 mb-4">
+                    <div class="card episode-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2 home-episodes_section-episodes-1-number">Episode 2</span>
+                            <h5 class="card-title home-episodes_section-episodes-1-title">You Matter Like Code</h5>
+                            <p class="card-text text-muted home-episodes_section-episodes-1-date">April 1, 2025</p>
+                            <p class="card-text home-episodes_section-episodes-1-description">We explore the human side of coding and why developers should be valued as much as the code they write.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary home-episodes_section-episodes-1-button">Coming Soon <i class="fas fa-calendar ms-1"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- Coming Soon: Episode 3 -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-microphone-alt text-primary me-3" style="font-size: 2rem;"></i>
-                                <div>
-                                    <h3 class="card-title h5 mb-1">Coming Soon: Episode 3</h3>
-                                    <p class="text-muted small mb-0">Expected: April 17, 2025</p>
-                                </div>
-                            </div>
-                            <p class="card-text">"Real-Time Speech Recognition: Behind the Scenes" - We'll demonstrate our custom real-time Whisper transcription tool and share the hilarious moments when AI transcription goes wrong. As one host exclaimed: "This is how AI is supposed to work, dude!" We'll also discuss why "I'm totally decent make my daughter had a vibe code" is not what anyone actually said.</p>
-                            <a href="#signup" class="btn btn-sm btn-outline-primary mt-2">
-                                <i class="fas fa-bell me-1"></i> Get Notified
-                            </a>
+                <div class="col-md-4 mb-4">
+                    <div class="card episode-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2 home-episodes_section-episodes-2-number">Episode 3</span>
+                            <h5 class="card-title home-episodes_section-episodes-2-title">AI Is Supposed To Work, Dude!</h5>
+                            <p class="card-text text-muted home-episodes_section-episodes-2-date">April 8, 2025</p>
+                            <p class="card-text home-episodes_section-episodes-2-description">Our hosts rant about AI expectations vs. reality and share stories of AI successes and failures.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary home-episodes_section-episodes-2-button">Coming Soon <i class="fas fa-calendar ms-1"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="episodes.html" class="btn btn-primary">View All Upcoming Episodes <i class="fas fa-arrow-right ms-2"></i></a>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="episodes.html" class="btn btn-primary">View All Episodes <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Discussions Section -->
+    <section class="py-5 bg-image-callout text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <i class="fas fa-hat-wizard wizard-icon mb-4"></i>
+                    <h2 class="callout-heading mb-4" id="expert-discussions-title">Join Our Expert Discussions</h2>
+                    <p class="callout-text mb-4" id="expert-discussions-text">Participate in live discussions with industry experts who bring valuable insights on AI, real-time transcription, and cutting-edge technology.</p>
+                    <a href="#signup" class="btn btn-callout btn-lg pulse-button" id="expert-discussions-button">Register Now <i class="fas fa-angle-right ms-2"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -174,7 +170,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-                    <h2 class="mb-4">Subscribe to Vibecast.me</h2>
+                    <h2 class="mb-4">Subscribe to vibecast.me</h2>
                     <p class="mb-4">Sign up to receive updates about new episodes and exclusive content.</p>
                     <form id="signup-form" class="signup-form">
                         <div class="mb-3">
@@ -240,42 +236,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5><i class="fas fa-rocket me-2"></i> Vibecast.me</h5>
-                    <p>A podcast about technology, AI, and the future of work.</p>
+                <div class="col-md-6">
+                    <h5 class="site-name"><i class="fas fa-rocket me-2"></i>vibecast.me</h5>
+                    <p class="site-description">A podcast exploring the intersection of technology, AI, and real-world applications.</p>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="episodes.html" class="text-white">Episodes</a></li>
-                        <li><a href="about.html" class="text-white">About</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Connect</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-spotify"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-apple"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col text-center">
-                    <p> 2025 Vibecast.me. All rights reserved.</p>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; <span class="site-copyright">2025 vibecast.me. All rights reserved.</span></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Content Loader JS -->
     <script src="js/content-loader.js"></script>
 </body>
 </html>

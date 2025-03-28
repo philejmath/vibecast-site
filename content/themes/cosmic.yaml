@@ -1,8 +1,8 @@
 # Site-wide content
 site:
-  name: Vibecast.me
+  name: vibecast.me
   tagline: A podcast exploring technology, AI, and the future of work
-  copyright: © 2025 Vibecast.me. All rights reserved.
+  copyright: 2025 vibecast.me. All rights reserved.
   description: A podcast about technology, AI, and the future of work.
 
 # Navigation
@@ -25,10 +25,10 @@ callout:
 # Home page content
 home:
   hero:
-    title: Welcome to Vibecast.me
+    title: Welcome to vibecast.me
     subtitle: A podcast exploring technology, AI, and the future of work
-    button_primary: Subscribe Now
-    button_secondary: Coming Soon
+    button_primary: Preparing for Launch
+    button_secondary: Countdown Initiated
   
   features:
     - title: Weekly Episodes
@@ -62,8 +62,14 @@ home:
         description: "We'll demonstrate our custom real-time Whisper transcription tool and share the hilarious moments when AI transcription goes wrong. As one host exclaimed: \"This is how AI is supposed to work, dude!\" We'll also discuss why \"I'm totally decent make my daughter had a vibe code\" is not what anyone actually said."
         button: Get Notified
   
+  expert_discussions:
+    title: Join Our Cosmic Expert Discussions
+    text: Where tech conversations reach interstellar levels! Join our live discussions with industry experts who bring cosmic insights on AI, real-time speech recognition, and cutting-edge technology. Experience our Whisper transcription implementation in action!
+    button: Launch Into Space
+    icon: hat-wizard
+  
   subscribe:
-    title: Subscribe to Vibecast.me
+    title: Subscribe to vibecast.me
     subtitle: Sign up to receive updates about new episodes and exclusive content.
     button: Subscribe
     privacy: We'll never share your email with anyone else.
@@ -72,7 +78,7 @@ home:
 # Episodes page content
 episodes:
   header:
-    title: Vibecast.me Episodes
+    title: vibecast.me Episodes
     subtitle: Stay tuned for our upcoming episodes about technology, AI, and the future of work
   
   episode_details:
@@ -117,13 +123,13 @@ episodes:
 # About page content
 about:
   header:
-    title: About Vibecast.me
+    title: About vibecast.me
     subtitle: Learn more about our podcast and the cosmic crew behind it
   
   story:
     title: Our Story
     paragraphs:
-      - Vibecast.me was born from a shared passion for technology and a curiosity about how AI is reshaping our world. We started this podcast in early 2025 to explore the intersection of technology, AI, and the future of work.
+      - vibecast.me was born from a shared passion for technology and a curiosity about how AI is reshaping our world. We started this podcast in early 2025 to explore the intersection of technology, AI, and the future of work.
       - Our goal is to provide insightful, accessible discussions about complex technological topics. Whether you're a tech professional, a curious observer, or somewhere in between, we aim to make these conversations engaging and valuable.
       - Each week, we bring you interviews with industry experts, deep dives into emerging technologies, and thoughtful discussions about how these innovations are changing the way we work and live.
   
@@ -150,7 +156,7 @@ about:
   
   mission:
     title: Our Mission
-    intro: At Vibecast.me, we believe that understanding technology is crucial for navigating our rapidly changing world. Our mission is to
+    intro: At vibecast.me, we believe that understanding technology is crucial for navigating our rapidly changing world. Our mission is to
     points:
       - Demystify complex technological concepts
       - Explore the ethical implications of emerging technologies
